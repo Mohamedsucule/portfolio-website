@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/custom.css";
+
+import background from "../src/images/background.jpg";
+import ParticlesBackground from "./ParticlesBackground";
+import Typical from "react-typical";
+import Text from "./Text";
+import NavBar from "./NavBar";
+import Header from "./Header";
+import { Route, Switch } from "react-router-dom";
+import Resume from "./Resume";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
+    >
+      <Header /> <ParticlesBackground className="particles" />
     </div>
   );
 }
